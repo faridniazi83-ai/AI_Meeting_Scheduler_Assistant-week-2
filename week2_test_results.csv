@@ -1,0 +1,16 @@
+Test #,User Prompt,Expected Behavior,Result,Response Quality,Failure / Notes
+1,Monday at 2 PM,Check Monday 14:00 availability,Passed,Good,None
+2,Tuesday at 2 PM,Reject 14:00 and show alternatives,Passed,Good,None
+3,What times are available on Tuesday?,"Show 11:00, 13:00, 16:00",Passed,Good,None
+4,Wednesday morning,Show Wednesday morning slot(s),Passed,Good,None
+5,Thursday afternoon,Show Thursday afternoon slot(s),Passed,Good,None
+6,Friday at 2 PM,Check Friday 14:00,Passed,Good,None
+7,Monday morning,Show Monday morning slot(s),Passed,Good,None
+8,Wednesday at 5 PM,Check Wednesday 17:00,Passed,Good,None
+9,What about Thursday?,Show Thursday available slots,Passed,Good,None
+10,Friday at 9 AM,Check Friday 09:00,Failed,N/A,Hugging Face 402 quota error
+11,Monday at 10 AM,Check Monday 10:00,Not executed,N/A,API quota exhausted
+12,Tuesday afternoon,Show Tuesday afternoon slots,Not executed,N/A,API quota exhausted
+13,Wednesday at 11 AM,Check Wednesday 11:00,Not executed,N/A,API quota exhausted
+14,Tell me a joke,Politely refuse because it is out of scope,Not executed,N/A,API quota exhausted
+15,What is the weather today?,Politely refuse because it is out of scope,Not executed,N/A,API quota exhausted
